@@ -47,7 +47,7 @@ export function Navbar() {
             _hover={{ opacity: 0.75 }}
             transition="opacity 0.2s"
           >
-            {"<YN />"}
+            {"<UO />"}
           </Box>
 
           {/* Desktop nav */}
@@ -84,7 +84,7 @@ export function Navbar() {
               </Link>
             ))}
 
-            <Button
+            {/* <Button
               as="a"
               href="#contact"
               fontFamily={FONT_BODY}
@@ -108,7 +108,7 @@ export function Navbar() {
               transition="all 0.2s"
             >
               Hire Me
-            </Button>
+            </Button> */}
           </HStack>
 
           {/* Mobile burger */}

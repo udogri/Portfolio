@@ -83,7 +83,7 @@ export function Hero() {
             opacity={0}
             animation={`${fadeUp} 0.7s ease 0.25s forwards`}
           >
-            I craft scalable{" "}
+            Hi I'm{" "}
             <Box
               as="em"
               fontStyle="italic"
@@ -96,13 +96,13 @@ export function Hero() {
                 animation: `${shimmer} 4s linear infinite`,
               }}
             >
-              React
-            </Box>{" "}
-            applications that ship.
+            Oruaro
+            </Box>{", "}
+            a Frontend Engineer.
           </Heading>
 
           {/* Body */}
-          <Text
+          {/* <Text
             fontFamily={FONT_BODY}
             fontSize={{ base: "md", md: "lg" }}
             color={C.subtext}
@@ -112,10 +112,10 @@ export function Hero() {
             opacity={0}
             animation={`${fadeUp} 0.7s ease 0.4s forwards`}
           >
-            Frontend engineer specializing in TypeScript and React — building
+            Frontend engineer actively building the web — building
             performance-driven, maintainable interfaces that teams love to work
             with and users love to use.
-          </Text>
+          </Text> */}
 
           {/* CTAs */}
           <HStack
@@ -179,37 +179,7 @@ export function Hero() {
             </Button>
           </HStack>
 
-          {/* Stats row */}
-          <HStack
-            spacing={10}
-            mt={16}
-            pt={16}
-            borderTop={`1px solid ${C.border}`}
-            w="full"
-            maxW="480px"
-            opacity={0}
-            animation={`${fadeUp} 0.7s ease 0.7s forwards`}
-          >
-            {[
-              { value: "3+", label: "Years Experience" },
-              { value: "20+", label: "Projects Shipped" },
-              { value: "100%", label: "TypeScript" },
-            ].map(({ value, label }) => (
-              <VStack key={label} align="start" spacing={0}>
-                <Text
-                  fontFamily={FONT_DISPLAY}
-                  fontSize="2xl"
-                  color={C.text}
-                  lineHeight="1"
-                >
-                  {value}
-                </Text>
-                <Text fontFamily={FONT_BODY} fontSize="xs" color={C.muted} mt={1}>
-                  {label}
-                </Text>
-              </VStack>
-            ))}
-          </HStack>
+          
         </VStack>
       </Container>
     </Box>
