@@ -10,11 +10,12 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import type { ReactElement } from "react";
 import { C, FONT_BODY, FONT_DISPLAY, FONT_MONO } from "./tokens";
 
 // ─── Inline SVG icons ─────────────────────────────────────────────────────────
 
-const icons: Record<string, JSX.Element> = {
+const icons: Record<string, ReactElement> = {
   JavaScript: (
     <svg viewBox="0 0 32 32" fill="none" width="18" height="18">
       <rect width="32" height="32" rx="3" fill="#F7DF1E" />
@@ -276,17 +277,10 @@ function SkillRow({ name }: { name: string }) {
 
 export function Skills() {
   const groupCount = SKILL_GROUPS.length;
-
-  // When there's only 1 group, split its skills into evenly-sized columns
-  // so they fill the full width of the section.
   const isSingleGroup = groupCount === 1;
 
-  // For a single group: split skills into 4 balanced sub-columns
-  
-  // Responsive column count for multi-group grids
   const gridCols =
-    groupCount === 1 ? 1          // handled separately below
-    : groupCount === 2 ? { base: 1, sm: 2 }
+    groupCount === 2 ? { base: 1, sm: 2 }
     : groupCount === 3 ? { base: 1, sm: 2, lg: 3 }
     : { base: 1, sm: 2, lg: 4 };
 
@@ -328,7 +322,6 @@ export function Skills() {
             >
               {SKILL_GROUPS[0].category}
             </Text>
-
             <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={2}>
               {SKILL_GROUPS[0].skills.map(({ name }) => (
                 <SkillRow key={name} name={name} />

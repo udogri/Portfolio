@@ -20,7 +20,7 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { C, FONT_BODY, FONT_DISPLAY, FONT_MONO } from "./tokens";
 import OneByOne from "../assets/oneByOne.png";
 import CineScout from "../assets/CineScout.png";

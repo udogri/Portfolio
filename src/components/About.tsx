@@ -129,7 +129,7 @@ export default function About() {
         <Box as="em" fontStyle="italic" color={C.accent}>
         Udogri Oruaro, a frontend engineer
         </Box>{" "}
-        who enjoys building thoughtful user interfaces.
+        who enjoys building functional user interfaces.
     </Heading>
 
     <Text

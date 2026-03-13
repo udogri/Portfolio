@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, HStack, VStack, Link, Button, Container } from "@chakra-ui/react";
+import { Box, Flex, HStack, VStack, Link, Container } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import { useEffect, useState } from "react";
 import { C, FONT_BODY, FONT_MONO } from "./tokens";

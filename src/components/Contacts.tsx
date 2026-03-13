@@ -56,7 +56,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    handle: "udogri oruaro.com/in/you",
+    handle: "udogri oruaro",
     href: "https://linkedin.com/in/udogri-oruaro/",
     icon: <LinkedInIcon />,
     color: "#0A66C2",

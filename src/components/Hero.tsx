@@ -6,11 +6,11 @@ import {
   Container,
   Heading,
   HStack,
-  Text,
   VStack,
 } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import { C, FONT_BODY, FONT_DISPLAY, FONT_MONO } from "./tokens";
+import cvFile from "../assets/OruaroDevCv.pdf";
 
 const fadeUp = keyframes`
   from { opacity: 0; transform: translateY(28px); }
@@ -128,8 +128,8 @@ export function Hero() {
             {/* Download CV */}
             <Button
               as="a"
-              href="/cv.pdf"
-              download
+              href={cvFile}
+              download="OruaroDevCv.pdf"
               fontFamily={FONT_BODY}
               fontSize="sm"
               fontWeight="600"
@@ -154,7 +154,7 @@ export function Hero() {
             {/* View CV online */}
             <Button
               as="a"
-              href="/cv.pdf"
+              href={cvFile}
               target="_blank"
               rel="noopener noreferrer"
               fontFamily={FONT_BODY}

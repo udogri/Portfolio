@@ -123,7 +123,7 @@ export function Footer() {
                 maxW="260px"
               >
                 Frontend engineer crafting scalable web
-                applications with a relentless eye for detail.
+                applications.
               </Text>
 
               {/* Social icons */}
@@ -289,7 +289,7 @@ export function Footer() {
           <Text fontFamily={FONT_MONO} fontSize="11px" color={C.muted} letterSpacing="0.06em">
             © {year} Udogri Oruaro.{" "}
             <Box as="span" color={C.border} mx={1}>·</Box>
-            Designed & built with React & Chakra UI
+            Designed & built with TypeScript & React
           </Text>
 
           {/* Back to top */}
