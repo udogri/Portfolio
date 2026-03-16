@@ -129,7 +129,8 @@ export function Hero() {
             <Button
               as="a"
               href={cvFile}
-              download="OruaroDevCv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               fontFamily={FONT_BODY}
               fontSize="sm"
               fontWeight="600"
@@ -148,11 +149,11 @@ export function Hero() {
               }}
               transition="all 0.2s"
             >
-              ↓ Download CV
+              ↓ View CV
             </Button>
 
             {/* View CV online */}
-            <Button
+            {/* <Button
               as="a"
               href={cvFile}
               target="_blank"
@@ -176,7 +177,7 @@ export function Hero() {
               transition="all 0.2s"
             >
               View CV ↗
-            </Button>
+            </Button> */}
           </HStack>
 
           
