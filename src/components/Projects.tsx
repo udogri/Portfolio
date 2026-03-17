@@ -514,7 +514,7 @@ function ProjectCard({
                 transition="all 0.2s"
                 onClick={(e) => e.stopPropagation()}
               >
-                Live Demo ↗
+                Live
               </Button>
             )}
 

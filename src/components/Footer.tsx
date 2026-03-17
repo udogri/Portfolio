@@ -86,7 +86,7 @@ export function Footer() {
 
         {/* ── Main footer body ──────────────────────────────────────── */}
         <Grid
-          templateColumns={{ base: "1fr", md: "1fr 1fr 1fr" }}
+          templateColumns={{ base: "1fr", md: "1fr 1fr" }}
           gap={{ base: 12, md: 0 }}
           py={{ base: 14, md: 16 }}
           borderBottom={`1px solid ${C.border}`}
@@ -202,80 +202,7 @@ export function Footer() {
           </GridItem>
 
           {/* Col 3 — Availability */}
-          <GridItem display="flex" justifyContent={{ base: "start", md: "flex-end" }}>
-            <VStack align={{ base: "start", md: "end" }} spacing={4}>
-              <Text
-                fontFamily={FONT_MONO}
-                fontSize="10px"
-                letterSpacing="0.2em"
-                textTransform="uppercase"
-                color={C.accent}
-                mb={1}
-              >
-                Availability
-              </Text>
-
-              {/* Status pill */}
-              <HStack
-                spacing={2}
-                px={3}
-                py={2}
-                border={`1px solid ${C.border}`}
-                borderRadius="3px"
-                bg={C.surface}
-              >
-                {/* Pulsing dot */}
-                <Box position="relative" w="7px" h="7px">
-                  <Box
-                    position="absolute"
-                    inset={0}
-                    borderRadius="full"
-                    bg={C.accent}
-                    opacity={0.4}
-                    sx={{
-                      animation: "ping 1.5s cubic-bezier(0,0,0.2,1) infinite",
-                      "@keyframes ping": {
-                        "75%, 100%": { transform: "scale(2)", opacity: 0 },
-                      },
-                    }}
-                  />
-                  <Box
-                    position="absolute"
-                    inset={0}
-                    borderRadius="full"
-                    bg={C.accent}
-                  />
-                </Box>
-                <Text fontFamily={FONT_MONO} fontSize="11px" color={C.accent} letterSpacing="0.05em">
-                  Open to work
-                </Text>
-              </HStack>
-
-              <Text
-                fontFamily={FONT_BODY}
-                fontSize="xs"
-                color={C.muted}
-                textAlign={{ base: "left", md: "right" }}
-                maxW="200px"
-                lineHeight="1.7"
-              >
-                Available for freelance, contract & full-time roles.
-              </Text>
-
-              <Link
-                href="mailto:oudogri@email.com"
-                fontFamily={FONT_MONO}
-                fontSize="xs"
-                color={C.subtext}
-                textDecoration="none"
-                letterSpacing="0.05em"
-                _hover={{ color: C.accent }}
-                transition="color 0.15s"
-              >
-                oudogri@gmail.com
-              </Link>
-            </VStack>
-          </GridItem>
+          
         </Grid>
 
         {/* ── Bottom bar ────────────────────────────────────────────── */}
