@@ -12,6 +12,7 @@ import {
 import { keyframes } from "@emotion/react";
 import { C, FONT_BODY, FONT_DISPLAY, FONT_MONO } from "./tokens";
 import { Navbar } from "./Navbar";
+import Me from "../assets/Me.png";
 
 const fadeUp = keyframes`
   from { opacity: 0; transform: translateY(24px); }
@@ -73,8 +74,7 @@ export default function About() {
                             {/* Photo */}
                             <Box
                                 flexShrink={0}
-                                w={{ base: "120px", md: "180px" }}
-                                h={{ base: "120px", md: "180px" }}
+                               
                                 borderRadius="4px"
                                 overflow="hidden"
                                 border={`1px solid ${C.border}`}
@@ -83,7 +83,7 @@ export default function About() {
                                 position="relative"
                             >
                                 <Image
-                                    src="https://placehold.co/360x360/111118/7FFFD4?text=Photo"
+                                    src={Me}
                                     // Replace with your actual photo: src="/photo.jpg"
                                     alt="Your Name"
                                     w="full"
