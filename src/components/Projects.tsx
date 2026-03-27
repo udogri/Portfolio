@@ -326,7 +326,7 @@ function ProjectDrawer({
                     Live
                   </Button>
                 )}
-                {project.links.github && (
+                {/* {project.links.github && (
                   <Button
                     as="a"
                     href={project.links.github}
@@ -350,7 +350,7 @@ function ProjectDrawer({
                   >
                     GitHub
                   </Button>
-                )}
+                )} */}
               </HStack>
             </Box>
 

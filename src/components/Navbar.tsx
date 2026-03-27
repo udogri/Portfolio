@@ -14,6 +14,16 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+  
+    const yOffset = -80; // adjust for fixed navbar height
+    const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+  
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
@@ -52,37 +62,23 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <HStack spacing={10} display={{ base: "none", md: "flex" }}>
-            {["About", "Projects", "Skills", "Contact"].map((item) => (
-              <Link
-                key={item}
-                href={item === "About" ? "/about" : `#${item.toLowerCase()}`}
-                fontFamily={FONT_BODY}
-                fontSize="sm"
-                fontWeight="500"
-                letterSpacing="0.05em"
-                color={C.subtext}
-                textTransform="uppercase"
-                textDecoration="none"
-                position="relative"
-                _hover={{ color: C.text }}
-                transition="color 0.2s"
-                sx={{
-                  "&::after": {
-                    content: '""',
-                    position: "absolute",
-                    bottom: "-3px",
-                    left: 0,
-                    width: 0,
-                    height: "1px",
-                    background: C.accent,
-                    transition: "width 0.25s ease",
-                  },
-                  "&:hover::after": { width: "100%" },
-                }}
-              >
-                {item}
-              </Link>
-            ))}
+          {["About", "Projects", "Skills", "Contact"].map((item) => (
+  <Box
+    key={item}
+    onClick={() => scrollToSection(item.toLowerCase())}
+    cursor="pointer"
+    fontFamily={FONT_BODY}
+    fontSize="sm"
+    fontWeight="500"
+    letterSpacing="0.05em"
+    color={C.subtext}
+    textTransform="uppercase"
+    position="relative"
+    _hover={{ color: C.text }}
+  >
+    {item}
+  </Box>
+))}
 
             {/* <Button
               as="a"

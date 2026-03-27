@@ -33,10 +33,9 @@ const fadeUp = keyframes`
 export default function About() {
     return (
         <Box bg={C.bg} color={C.text} minH="100vh" fontFamily={FONT_BODY}>
-            <Navbar />
 
             <Box as="main" pt={{ base: "80px", md: "96px" }}>
-
+                
                 {/* ── Hero band ─────────────────────────────────────────────────── */}
                 <Box
                     position="relative"
@@ -53,6 +52,7 @@ export default function About() {
                         backgroundSize="60px 60px"
                         pointerEvents="none"
                     />
+                    
                     {/* Glow */}
                     <Box
                         position="absolute"
@@ -64,13 +64,30 @@ export default function About() {
                         background={`radial-gradient(circle, ${C.accent}10 0%, transparent 65%)`}
                         pointerEvents="none"
                     />
+                    
 
                     <Container maxW="7xl" px={{ base: 6, md: 10 }} position="relative">
+                        
+                    <Flex align="baseline" gap={6} mb={16}>
+          <Text fontFamily={FONT_MONO} fontSize="xs" color={C.accent} letterSpacing="0.2em">
+            01
+          </Text>
+          <Heading
+            fontFamily={FONT_DISPLAY}
+            fontSize={{ base: "3xl", md: "4xl" }}
+            fontWeight="400"
+            color={C.text}
+          >
+            About
+          </Heading>
+          <Box flex={1} h="1px" bg={C.border} display={{ base: "none", md: "block" }} />
+        </Flex>
                         <Flex
                             direction={{ base: "column", md: "row" }}
                             align={{ base: "start", md: "center" }}
                             gap={{ base: 10, md: 16 }}
                         >
+                            
                             {/* Photo */}
                             <Box
                                 flexShrink={0}
