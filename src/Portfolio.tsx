@@ -33,7 +33,7 @@ export default function Portfolio() {
       <Box id="hero"><Hero /></Box>
       <Box id="about"><About /></Box>
       <Box id="projects"><Projects /></Box>
-      <Box id="skills"><Skills /></Box>
+      <Box id="tools"><Skills /></Box>
       <Box id="contact"><Contact /></Box>
 
       <Footer />

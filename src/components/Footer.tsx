@@ -42,10 +42,10 @@ const ArrowUpIcon = () => (
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const NAV_LINKS = [
-  { label: "About",    href: "/about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills",   href: "#skills" },
-  { label: "Contact",  href: "#contact" },
+  { label: "About" },
+  { label: "Projects" },
+  { label: "Tools" },
+  { label: "Contact" },
 ];
 
 const SOCIAL_LINKS = [
@@ -61,6 +61,16 @@ export function Footer() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+  
+    const yOffset = -80; // same as navbar
+    const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+  
+    window.scrollTo({ top: y, behavior: "smooth" });
   };
 
   return (
@@ -171,10 +181,10 @@ export function Footer() {
               >
                 Navigation
               </Text>
-              {NAV_LINKS.map(({ label, href }) => (
+              {NAV_LINKS.map(({ label }) => (
                 <Link
                   key={label}
-                  href={href}
+                  onClick={() => scrollToSection(label.toLowerCase())}
                   fontFamily={FONT_BODY}
                   fontSize="sm"
                   color={C.subtext}

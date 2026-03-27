@@ -22,6 +22,31 @@ const shimmer = keyframes`
   100% { background-position:  200% center; }
 `;
 
+const EMAIL = "oudogri@gmail.com";
+
+// Pre-filled mailto — opens default mail client with To, Subject & body ready
+const MAILTO_HREF = [
+  `mailto:${EMAIL}`,
+  `?subject=${encodeURIComponent("Let's Work Together")}`,
+  `&body=${encodeURIComponent(
+    "Hi,\n\nI came across your portfolio and would love to discuss a potential opportunity.\n\nA bit about what I'm looking for:\n\n\nLooking forward to hearing from you!"
+  )}`,
+].join("");
+
+const buttonStyles = {
+  fontFamily: FONT_BODY,
+  fontSize: "sm",
+  fontWeight: "600",
+  letterSpacing: "0.06em",
+  textTransform: "uppercase",
+  px: 8,
+  py: 6,
+  h: "56px", // 🔥 fixed height
+  minW: "200px", // 🔥 ensures same width
+  borderRadius: "2px",
+  transition: "all 0.2s",
+};
+
 export function Hero() {
   return (
     <Box
@@ -127,57 +152,36 @@ export function Hero() {
           >
             {/* Download CV */}
             <Button
-              as="a"
-              href={cvFile}
-              target="_blank"
-              rel="noopener noreferrer"
-              fontFamily={FONT_BODY}
-              fontSize="sm"
-              fontWeight="600"
-              letterSpacing="0.06em"
-              textTransform="uppercase"
-              px={8}
-              py={6}
-              h="auto"
-              bg={C.accent}
-              color={C.bg}
-              borderRadius="2px"
-              _hover={{
-                bg: C.accentDim,
-                transform: "translateY(-2px)",
-                boxShadow: `0 12px 32px ${C.accent}40`,
-              }}
-              transition="all 0.2s"
-            >
-              ↓ View CV
-            </Button>
+  as="a"
+  href={cvFile}
+  target="_blank"
+  rel="noopener noreferrer"
+  {...buttonStyles}
+  bg={C.accent}
+  color={C.bg}
+  _hover={{
+    bg: C.accentDim,
+    transform: "translateY(-2px)",
+    boxShadow: `0 12px 32px ${C.accent}40`,
+  }}
+>
+  ↓ View CV
+</Button>
 
-            {/* View CV online */}
-            {/* <Button
-              as="a"
-              href={cvFile}
-              target="_blank"
-              rel="noopener noreferrer"
-              fontFamily={FONT_BODY}
-              fontSize="sm"
-              fontWeight="500"
-              letterSpacing="0.06em"
-              textTransform="uppercase"
-              px={8}
-              py={6}
-              h="auto"
-              bg="transparent"
-              color={C.text}
-              border={`1px solid ${C.border}`}
-              borderRadius="2px"
-              _hover={{
-                borderColor: C.muted,
-                transform: "translateY(-2px)",
-              }}
-              transition="all 0.2s"
-            >
-              View CV ↗
-            </Button> */}
+<Button
+  as="a"
+  href={MAILTO_HREF}
+  {...buttonStyles}
+  bg={C.accent}
+  color={C.bg}
+  _hover={{
+    bg: C.accentDim,
+    transform: "translateY(-2px)",
+    boxShadow: `0 12px 32px ${C.accent}40`,
+  }}
+>
+  Send Email ↗
+</Button>
           </HStack>
 
           

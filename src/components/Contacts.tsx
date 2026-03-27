@@ -2,18 +2,22 @@
 
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
   HStack,
   SimpleGrid,
   Text,
-  VStack,
 } from "@chakra-ui/react";
 import { C, FONT_BODY, FONT_DISPLAY, FONT_MONO } from "./tokens";
 
 // ─── Social Icons ─────────────────────────────────────────────────────────────
+
+const EmailIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+  </svg>
+);
 
 const GitHubIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -35,18 +39,16 @@ const TwitterIcon = () => (
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const EMAIL = "oudogri@gmail.com";
 
-// Pre-filled mailto — opens default mail client with To, Subject & body ready
-const MAILTO_HREF = [
-  `mailto:${EMAIL}`,
-  `?subject=${encodeURIComponent("Let's Work Together")}`,
-  `&body=${encodeURIComponent(
-    "Hi,\n\nI came across your portfolio and would love to discuss a potential opportunity.\n\nA bit about what I'm looking for:\n\n\nLooking forward to hearing from you!"
-  )}`,
-].join("");
 
 const socials = [
+  {
+    label: "Email",
+    handle: "oudogri@gmail.com",
+    href: "mailto:oudogri@gmail.com",
+    icon: <EmailIcon />,
+    color: "#7FFFD4", // matches your accent nicely
+  },
   {
     label: "GitHub",
     handle: "@udogri",
@@ -108,100 +110,14 @@ export function Contact() {
             fontWeight="400"
             color={C.text}
           >
-            Let's Work Together
+            Contact
           </Heading>
           <Box flex={1} h="1px" bg={C.border} display={{ base: "none", md: "block" }} />
         </Flex>
 
-        {/* ── Email CTA ───────────────────────────────────────────────── */}
-        <Flex
-          direction={{ base: "column", md: "row" }}
-          justify="space-between"
-          align={{ base: "start", md: "end" }}
-          gap={12}
-          mb={{ base: 20, md: 28 }}
-        >
-          <VStack align="start" spacing={6} maxW="480px">
-            <Text fontFamily={FONT_BODY} fontSize="lg" color={C.subtext} lineHeight="1.8">
-              Currently open to freelance engagements, contract roles, and
-              select full-time opportunities. I bring strong opinions on
-              architecture and a relentless eye for detail.
-            </Text>
+        
 
-            <VStack align="start" spacing={3}>
-              {[
-                "React / TypeScript specialist",
-                "Strong communication & async-first workflow",
-                "Available for immediate start",
-              ].map((point) => (
-                <HStack key={point} spacing={3}>
-                  <Text color={C.accent} fontSize="xs">✦</Text>
-                  <Text fontFamily={FONT_BODY} fontSize="sm" color={C.muted}>
-                    {point}
-                  </Text>
-                </HStack>
-              ))}
-            </VStack>
-          </VStack>
-
-          <VStack align={{ base: "start", md: "end" }} spacing={4}>
-            <Button
-              as="a"
-              href={MAILTO_HREF}
-              fontFamily={FONT_BODY}
-              fontSize="sm"
-              fontWeight="600"
-              letterSpacing="0.08em"
-              textTransform="uppercase"
-              px={10}
-              py={7}
-              h="auto"
-              bg={C.accent}
-              color={C.bg}
-              borderRadius="2px"
-              _hover={{
-                bg: C.accentDim,
-                transform: "translateY(-2px)",
-                boxShadow: `0 16px 40px ${C.accent}30`,
-              }}
-              transition="all 0.2s"
-            >
-              Send Me an Email ↗
-            </Button>
-
-            {/* Clickable email address as a fallback mailto too */}
-            <Text
-              as="a"
-              href={MAILTO_HREF}
-              fontFamily={FONT_MONO}
-              fontSize="xs"
-              color={C.muted}
-              textDecoration="none"
-              _hover={{ color: C.accent }}
-              transition="color 0.2s"
-            >
-              {EMAIL}
-            </Text>
-          </VStack>
-        </Flex>
-
-        {/* ── Find Me Elsewhere ───────────────────────────────────────── */}
-        <Flex align="baseline" gap={6} mb={10}>
-          <Text fontFamily={FONT_MONO} fontSize="xs" color={C.accent} letterSpacing="0.2em">
-            05
-          </Text>
-          <Heading
-            fontFamily={FONT_DISPLAY}
-            fontSize={{ base: "2xl", md: "3xl" }}
-            fontWeight="400"
-            color={C.text}
-          >
-            Find Me Elsewhere
-          </Heading>
-          <Box flex={1} h="1px" bg={C.border} display={{ base: "none", md: "block" }} />
-        </Flex>
-
-        <SimpleGrid columns={{ base: 1, sm: 3 }} spacing={4} maxW="680px">
+        <SimpleGrid columns={{ base: 1, sm: 4 }} spacing={4} >
           {socials.map(({ label, handle, href, icon, color }) => (
             <Box
               key={label}

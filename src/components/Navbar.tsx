@@ -62,7 +62,7 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <HStack spacing={10} display={{ base: "none", md: "flex" }}>
-          {["About", "Projects", "Skills", "Contact"].map((item) => (
+          {["About", "Projects", "Tools", "Contact"].map((item) => (
   <Box
     key={item}
     onClick={() => scrollToSection(item.toLowerCase())}
@@ -145,7 +145,7 @@ export function Navbar() {
             align="start"
             animation={`${fadeIn} 0.2s ease`}
           >
-            {["About", "Projects", "Skills", "Contact"].map((item) => (
+            {["About", "Projects", "Tools", "Contact"].map((item) => (
               <Link
                 key={item}
                 href={item === "About" ? "/about" : `#${item.toLowerCase()}`}

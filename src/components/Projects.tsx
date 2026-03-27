@@ -70,8 +70,8 @@ const PROJECTS: Project[] = [
       "Database that helps to keep tract of every student that is being sponsored and mentored",
       "Easy process for sponsors to find students to sponsor and mentor",
     ],
-    tech: ["React", "JavaScript", "Chakra UI", "Vite", "Node.js"],
-    links: { demo: "https://onebyone.ng", github: "https://github.com" },
+    tech: ["React", "JavaScript", "Chakra UI", "Vite", "Framer Motion", "jquery", "Node.js", "redux"],
+    links: { demo: "https://onebyone.ng", github: "https://github.com/udogri/One-by-one" },
     featured: true,
     image: OneByOne,
     year: "2024",
@@ -90,8 +90,8 @@ const PROJECTS: Project[] = [
       "Personalised watchlist with localStorage persistence",
       "Skeleton loading states and optimistic UI updates",
     ],
-    tech: ["React", "TypeScript", "Chakra UI", "Node.js", "Vite"],
-    links: { demo: "https://cine-scout-delta.vercel.app", github: "https://github.com" },
+    tech: ["React", "TypeScript", "Chakra UI", "Node.js", "Framer Motion", "Vite", "React Query"],
+    links: { demo: "https://cine-scout-delta.vercel.app", github: "https://github.com/udogri/CineScout" },
     featured: false,
     image: CineScout,
     year: "2023",
@@ -110,8 +110,8 @@ const PROJECTS: Project[] = [
       "Accessible keyboard navigation throughout the search flow",
       "Concurrent API call management with React Query",
     ],
-    tech: ["React", "JavaScript", "Chakra UI", "Node.js", "Vite"],
-    links: { demo: "https://find-it-flame.vercel.app/", github: "https://github.com" },
+    tech: ["React", "JavaScript", "Chakra UI", "Node.js", "Framer Motion", "Vite"],
+    links: { demo: "https://find-it-flame.vercel.app/", github: "https://github.com/udogri/FindIt" },
     featured: false,
     image: FindIt,
     year: "2023",
@@ -192,7 +192,7 @@ function ProjectDrawer({
               {project.title}
             </Heading>
 
-            <HStack spacing={5} mb={8} flexWrap="wrap">
+            {/* <HStack spacing={5} mb={8} flexWrap="wrap">
               <Text fontFamily={FONT_MONO} fontSize="11px" color={C.muted} letterSpacing="0.08em">
                 {project.year}
               </Text>
@@ -200,7 +200,7 @@ function ProjectDrawer({
               <Text fontFamily={FONT_MONO} fontSize="11px" color={C.muted} letterSpacing="0.08em">
                 {project.role}
               </Text>
-            </HStack>
+            </HStack> */}
 
             {/* Full description */}
             <Box mb={8} w="full">
@@ -326,7 +326,7 @@ function ProjectDrawer({
                     Live
                   </Button>
                 )}
-                {/* {project.links.github && (
+                {project.links.github && (
                   <Button
                     as="a"
                     href={project.links.github}
@@ -350,7 +350,7 @@ function ProjectDrawer({
                   >
                     GitHub
                   </Button>
-                )} */}
+                )}
               </HStack>
             </Box>
 
@@ -569,7 +569,7 @@ export function Projects() {
             fontWeight="400"
             color={C.text}
           >
-            Selected Work
+            Projects
           </Heading>
           <Box flex={1} h="1px" bg={C.border} display={{ base: "none", md: "block" }} />
         </Flex>

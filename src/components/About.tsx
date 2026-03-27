@@ -11,7 +11,6 @@ import {
 } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import { C, FONT_BODY, FONT_DISPLAY, FONT_MONO } from "./tokens";
-import { Navbar } from "./Navbar";
 import Me from "../assets/Me.png";
 
 const fadeUp = keyframes`

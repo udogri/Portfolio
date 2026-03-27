@@ -213,6 +213,9 @@ const SKILL_GROUPS: SkillGroup[] = [
       { name: "Tailwind CSS" },
       { name: "Node.js" },
       { name: "Git" },
+      { name: "Firebase" },
+      { name: "React Query" },
+      { name: "Figma" },
     ],
   },
   // Uncomment or add more groups as needed:
@@ -304,7 +307,7 @@ export function Skills() {
             fontWeight="400"
             color={C.text}
           >
-            Skills & Tools
+            Tools
           </Heading>
           <Box flex={1} h="1px" bg={C.border} display={{ base: "none", md: "block" }} />
         </Flex>
