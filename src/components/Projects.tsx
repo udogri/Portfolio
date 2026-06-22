@@ -25,7 +25,7 @@ import { C, FONT_BODY, FONT_DISPLAY, FONT_MONO } from "./tokens";
 import OneByOne from "../assets/oneByOne.png";
 import CineScout from "../assets/CineScout.png";
 import FindIt from "../assets/FindIt.png";
-import Sadel from "../assets/sadel.png";
+import Sadel from "../assets/Sadel.png";
 
 // ─── GitHub Icon ──────────────────────────────────────────────────────────────
 
