@@ -63,13 +63,13 @@ const socials = [
     icon: <LinkedInIcon />,
     color: "#0A66C2",
   },
-  {
-    label: "Twitter / X",
-    handle: "@oruaro6",
-    href: "https://x.com/Oruaro6",
-    icon: <TwitterIcon />,
-    color: "#ffffff",
-  },
+  // {
+  //   label: "Twitter / X",
+  //   handle: "@oruaro6",
+  //   href: "https://x.com/Oruaro6",
+  //   icon: <TwitterIcon />,
+  //   color: "#ffffff",
+  // },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────

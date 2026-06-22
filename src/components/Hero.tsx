@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import { C, FONT_BODY, FONT_DISPLAY, FONT_MONO } from "./tokens";
-import cvFile from "../assets/OruaroDevCv.pdf";
+import cvFile from "../assets/CV.pdf";
 
 const fadeUp = keyframes`
   from { opacity: 0; transform: translateY(28px); }
@@ -121,7 +121,7 @@ export function Hero() {
                 animation: `${shimmer} 4s linear infinite`,
               }}
             >
-            Oruaro
+              Oruaro
             </Box>{", "}
             a Frontend Engineer.
           </Heading>
@@ -152,39 +152,39 @@ export function Hero() {
           >
             {/* Download CV */}
             <Button
-  as="a"
-  href={cvFile}
-  target="_blank"
-  rel="noopener noreferrer"
-  {...buttonStyles}
-  bg={C.accent}
-  color={C.bg}
-  _hover={{
-    bg: C.accentDim,
-    transform: "translateY(-2px)",
-    boxShadow: `0 12px 32px ${C.accent}40`,
-  }}
->
-  ↓ View CV
-</Button>
+              as="a"
+              href={cvFile}
+              target="_blank"
+              rel="noopener noreferrer"
+              {...buttonStyles}
+              bg={C.accent}
+              color={C.bg}
+              _hover={{
+                bg: C.accentDim,
+                transform: "translateY(-2px)",
+                boxShadow: `0 12px 32px ${C.accent}40`,
+              }}
+            >
+              ↓ View CV
+            </Button>
 
-<Button
-  as="a"
-  href={MAILTO_HREF}
-  {...buttonStyles}
-  bg={C.accent}
-  color={C.bg}
-  _hover={{
-    bg: C.accentDim,
-    transform: "translateY(-2px)",
-    boxShadow: `0 12px 32px ${C.accent}40`,
-  }}
->
-  Send Email ↗
-</Button>
+            <Button
+              as="a"
+              href={MAILTO_HREF}
+              {...buttonStyles}
+              bg={C.accent}
+              color={C.bg}
+              _hover={{
+                bg: C.accentDim,
+                transform: "translateY(-2px)",
+                boxShadow: `0 12px 32px ${C.accent}40`,
+              }}
+            >
+              Send Email ↗
+            </Button>
           </HStack>
 
-          
+
         </VStack>
       </Container>
     </Box>

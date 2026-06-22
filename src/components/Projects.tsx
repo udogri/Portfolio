@@ -25,6 +25,7 @@ import { C, FONT_BODY, FONT_DISPLAY, FONT_MONO } from "./tokens";
 import OneByOne from "../assets/oneByOne.png";
 import CineScout from "../assets/CineScout.png";
 import FindIt from "../assets/FindIt.png";
+import Sadel from "../assets/sadel.png";
 
 // ─── GitHub Icon ──────────────────────────────────────────────────────────────
 
@@ -79,6 +80,25 @@ const PROJECTS: Project[] = [
   },
   {
     index: "02",
+    title: "Sadel Consult",
+    shortDescription:
+      "Sadel Consults Limited is a Nigerian multi-disciplinary consultancy providing sustainable, value-for-money solutions through creative design and rigorous engineering.",
+    fullDescription:
+      "Sadel Consults Limited is a Nigerian multi-disciplinary consultancy providing sustainable, value-for-money solutions through creative design and rigorous engineering. The firm serves private and public sector clients across energy, infrastructure, and built environment projects.",
+    highlights: [
+      "Ensured cross-device compatibility and implemented responsive design principles to support seamless usage across desktops, tablets, and mobile devices.",
+      "Implemented a modular and scalable codebase using React best practices, enhancing long-term maintainability and simplifying the integration of future services.",
+      "Integrated robust error-handling mechanisms and fallback strategies to ensure application stability and a seamless user experience even when facing external API or network issues.",
+    ],
+    tech: ["React", "TypeScript", "Chakra UI", "Node.js", "Vite"],
+    links: { demo: "https://sadel-consult.vercel.app", github: "https://github.com/solomonleke/SadelConsult" },
+    featured: false,
+    image: Sadel,
+    year: "2026",
+    role: "Frontend Developer",
+  },
+  {
+    index: "03",
     title: "CineScout",
     shortDescription:
       "A movie discovery app with advanced filtering, personalised watchlists, and strongly-typed API integrations with TMDB.",
