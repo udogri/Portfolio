@@ -26,6 +26,7 @@ import OneByOne from "../assets/oneByOne.png";
 import CineScout from "../assets/CineScout.png";
 import FindIt from "../assets/FindIt.png";
 import Sadel from "../assets/Sadel.png";
+import Tapp from "../assets/Tapp.png";
 
 // ─── GitHub Icon ──────────────────────────────────────────────────────────────
 
@@ -60,6 +61,42 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     index: "01",
+    title: "TAPP",
+    shortDescription:
+      "A fintech platform enabling users to manage multi-currency wallets, transfer funds, top up accounts, and handle currency conversions through an intuitive interface.",
+    fullDescription:
+      "TAPP is a fintech platform designed to simplify digital financial management through multi-currency wallets, seamless fund transfers, account top-ups, and currency conversion workflows. As a Frontend Engineer, I contributed to building responsive, reusable interfaces and integrating payment infrastructure, authentication services, backend APIs, and real-time transaction updates to deliver a cohesive financial experience.",
+    highlights: [
+      "Multi-currency wallet management and balance tracking",
+      "Account funding and payment integration using Stripe",
+      "Currency conversion workflows and cross-currency transactions",
+      "REST API integration for wallet operations and financial transactions",
+      "AWS Cognito authentication and user management",
+      "WebSocket integration for real-time balance and transaction updates",
+      "Reusable React components and responsive interfaces built with TypeScript and Chakra UI",
+    ],
+    tech: [
+      "React",
+      "TypeScript",
+      "Chakra UI",
+      "Stripe",
+      "AWS Cognito",
+      "AWS Lambda",
+      "API Gateway",
+      "REST APIs",
+      "WebSockets",
+    ],
+    links: {
+      demo: "https://app.dev.tapp.link/",
+      github: "",
+    },
+    featured: true,
+    image: Tapp,
+    year: "2026",
+    role: "Frontend Engineer",
+  },
+  {
+    index: "02",
     title: "OneByOne",
     shortDescription:
       "OneByOne is a Scholarship platform that helps to bring underprivilege students and Sponsors together with the help of selected school admins of such school.",
@@ -73,13 +110,13 @@ const PROJECTS: Project[] = [
     ],
     tech: ["React", "JavaScript", "Chakra UI", "Vite", "Framer Motion", "jquery", "Node.js", "redux"],
     links: { demo: "https://onebyone.ng", github: "https://github.com/udogri/One-by-one" },
-    featured: true,
+    featured: false,
     image: OneByOne,
     year: "2024",
     role: "Lead Frontend Engineer",
   },
   {
-    index: "02",
+    index: "03",
     title: "Sadel Consult",
     shortDescription:
       "Sadel Consults Limited is a Nigerian multi-disciplinary consultancy providing sustainable, value-for-money solutions through creative design and rigorous engineering.",
@@ -98,7 +135,7 @@ const PROJECTS: Project[] = [
     role: "Frontend Developer",
   },
   {
-    index: "03",
+    index: "04",
     title: "CineScout",
     shortDescription:
       "A movie discovery app with advanced filtering, personalised watchlists, and strongly-typed API integrations with TMDB.",
@@ -118,7 +155,7 @@ const PROJECTS: Project[] = [
     role: "Solo Developer",
   },
   {
-    index: "03",
+    index: "05",
     title: "FindIt",
     shortDescription:
       "A location-aware search tool for discovering nearby services, built with geolocation APIs and real-time map rendering.",
